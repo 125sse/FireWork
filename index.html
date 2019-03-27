@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FireWork</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: rgba(0,0,0,1);
+            overflow: hidden;
+        }
+
+        .fire_header{
+            position: absolute;
+            border-radius: 100%;
+            animation-fill-mode: forwards;
+            bottom: -70px;
+            box-shadow: 0 0 50px gold;
+            transition: all 1s;
+        }
+
+        .end_span{
+            position: absolute;
+            background-size: 100% 100%;
+            animation:fade 3s;
+            transition: all 1s;
+            transform-origin: center;
+            background-repeat: no-repeat;
+        }
+
+        @keyframes move_500 {
+            0%{
+                transform: translateY(0px) scale(1);
+            }
+
+            100%{
+                transform: translateY(-500px) scale(0.5);
+            }
+        }
+
+
+        @keyframes move_600 {
+            0%{
+                transform: translateY(0px) scale(1);
+            }
+
+            100%{
+                transform: translateY(-650px) scale(0.5);
+            }
+        }
+
+
+        
+        @keyframes fade {
+            0%{
+                transform: scale(0);
+                opacity: 1;
+            }
+
+            50%{
+                opacity: 1;
+            }
+
+            100%{
+                transform: scale(1.1);
+                opacity: 0;
+            }
+        }
+
+    </style>
+    <script src="js/fire.js"></script>
+</head>
+<body>
+<script>
+    setInterval(function () {
+        for(let i=0;i<10;i++){
+            let fire = new Fire();
+        }
+    },1000)
+</script>
+
+</body>
+</html>
